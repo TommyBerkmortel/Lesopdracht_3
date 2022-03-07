@@ -1,0 +1,601 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap");
+/*----------------------------------------1. Global Styles -----------------------------------------------------*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --width-div-narrow: 53vw;
+    --max-width-div-narrow: 636px;
+    --min-width-narrow: 320px;
+    --width-div-wide: 85vw;
+    --margin-div: 25px;
+    --margin-articles: 70px 0 70px 0;
+}
+
+
+/*----------------------------------------2. Typography --------------------------------------------------------*/
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+}
+
+.services h3 {
+    color: var(--purple-color);
+}
+
+.services p {
+    color: var(--grey-text);
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact h2 {
+    font-size: 35px;
+}
+
+.work a {
+    font-weight: 600;
+    color: #4845E4;
+}
+
+.input-fields {
+    font-weight: bold;
+}
+
+:root {
+    --grey-text: #7A7A7A;
+    --black-text: #0C0C0C;
+    --blue-text: #4845E4;
+    --purple-background-text: rgba(87, 34, 205, 0.1);
+    --white-background-text: rgba(255, 255, 255, 1);
+}
+
+/*----------------------------------------3. Layout ------------------------------------------------------------*/
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --background-header-contact: linear-gradient(135deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 75%);
+    --purple-color: #5722CD;
+    --background-projects: #F3F6F9;
+    --shadow: 0 15px 15px 0 rgba(0, 0, 0, .5);
+}
+
+.oblique-line{
+    border-bottom: 50px solid white;
+    border-right: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+}
+
+.oblique-line2{
+    border-bottom: 50px solid var(--background-projects);
+    border-right: 100vw solid transparent;
+    position: absolute;
+    bottom: 0;
+}
+
+.oblique-line3{
+    border-top: 50px solid white;
+    border-left: 100vw solid transparent;
+    position: absolute;
+    top: 0;
+}
+
+/*----------------------------------------4. Areas -------------------------------------------------------------*/
+
+/*------- 4.1 Header -------------------------------------------------------------------------------------------*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-header-contact);
+    color: white;
+    padding-bottom: 100px;
+    position: relative;
+    /*border: 3px solid black;*/
+}
+
+/*-----------------------------------------------------*/
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    Justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding-right: 50px;
+    gap: 2rem;
+    /*border: 3px solid red;*/
+}
+
+a:link {
+    text-decoration: none;
+}
+
+nav a:visited, nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/*-----------------------------------------------------*/
+
+.call2action {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex-shrink: 0;
+    width: var(--width-div-narrow);
+    max-width: var(--max-width-div-narrow);
+    margin: var(--margin-div);
+    text-align: center;
+    /*border: 3px solid red;*/
+}
+
+.call2action > * {
+    align-self: center;
+    padding: 15px;
+    /*border: 3px solid yellow;*/
+}
+
+.buttons {
+    color: white;
+    background-color: #ED4385;
+    border-radius: 25px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    box-shadow: var(--shadow);
+}
+
+/*-----------------------------------------------------*/
+
+.squiggle {
+    height: 50px;
+    width: 1px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+
+.squiggle2 {
+    position: absolute;
+    left:50%; transform: translateX(-50%);
+    bottom: 70px;
+}
+
+/*------- 4.2 Hello -------------------------------------------------------------------------------------------*/
+
+.hello {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    position: relative;
+    /*border: 3px solid black;*/
+
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 350px;
+    width: var(--width-div-narrow);
+    min-width: var(--min-width-narrow);
+    max-width: var(--max-width-div-narrow);
+    margin: var(--margin-div);
+    padding: 0 40px;
+    /*border: 3px solid red*/
+}
+
+.intro > * {
+    text-align: center;
+    margin: 10px;
+    /*border: 3px solid yellow;*/
+}
+
+.intro h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--blue-text);
+}
+
+.intro p {
+    padding-top: 100px;
+}
+
+.intro a {
+    color: var(--blue-text);
+}
+
+.hello::before {
+    content: "hello";
+    text-align: center;
+    font-weight: bold;
+    font-size: 360px;
+    color: var(--purple-background-text);
+    display: block;
+    position: absolute;
+    height: 400px;
+    top: 0;
+    left:50%; transform: translateX(-50%);
+    z-index: -1;
+    /*border: 3px solid green;*/
+}
+
+/*------- 4.3 work --------------------------------------------------------------------------------------------*/
+
+.work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 260px 115px 180px 115px;
+    background: var(--background-projects);
+    position: relative;
+    /*border: 3px solid black;*/
+}
+
+.work::before {
+    content: "work";
+    text-align: center;
+    font-weight: bold;
+    font-size: 440px;
+    color: var(--white-background-text);
+    display: block;
+    position: absolute;
+    height: 400px;
+    top: 0;
+    left:50%; transform: translateX(-50%);
+    /*border: 3px solid green;*/
+}
+
+/*-----------------------------------------------------*/
+.article-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: var(--width-div-wide);
+    margin: var(--margin-div);
+    flex-wrap: wrap;
+    z-index: 1;
+    /*border: 3px solid yellow;*/
+}
+
+.rolling-stone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: var(--margin-articles);
+    flex-basis: 260px;
+    max-height: 250px;
+    min-height: 250px;
+    position: relative;
+    /*border: 3px solid red;*/
+}
+
+.squiggle3 {
+    position: absolute;
+    left: 0;
+    bottom: 180px;
+}
+
+/*-----------------------------------------------------*/
+
+.article-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: var(--width-div-wide);
+    margin: var(--margin-div);
+    flex-wrap: wrap;
+    /*border: 3px solid yellow;*/
+}
+
+.variety {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: var(--margin-articles);
+    flex-basis: 260px;
+    max-height: 250px;
+    min-height: 250px;
+    position: relative;
+    /*border: 3px solid red;*/
+}
+
+.squiggle3 {
+    position: absolute;
+    left: 0;
+    bottom: 190px;
+}
+
+/*-----------------------------------------------------*/
+
+.article-3 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    width: var(--width-div-wide);
+    margin: var(--margin-div);
+    flex-wrap: wrap;
+    /*border: 3px solid yellow;*/
+}
+
+.worth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: var(--margin-articles);
+    flex-basis: 260px;
+    max-height: 250px;
+    min-height: 250px;
+    position: relative;
+    /*border: 3px solid red;*/
+}
+
+.squiggle3 {
+    position: absolute;
+    left: 0;
+    bottom: 190px;
+}
+
+/*-----------------------------------------------------*/
+
+
+.pictures-frame {
+    display: flex;
+    flex-basis: 700px;
+    max-height: 500px;
+    /*border: 3px solid purple;*/
+}
+
+.pictures {
+    width: 100%;
+    height: auto;
+    box-shadow: var(--shadow);
+    /*border: 3px solid orange;*/
+}
+
+/*-----------------------------------------------------*/
+
+.work a::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #4845E4;
+    position: absolute;
+    bottom: 6px;
+    left: 95px;
+    transition: width .35s ease-in-out;
+}
+
+.work a:hover::after {
+    width: 50px;
+}
+
+/*------- 4.4 Services --------------------------------------------------------------------------------------------*/
+
+.services {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 200px 10px 100px 10px;
+    z-index: -1;
+    /*border: 3px solid orange;*/
+}
+
+.container-services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    /*border: 3px solid red;*/
+}
+
+.container-services > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 335px;
+    background: white;
+    min-width: 300px;
+    height: 400px;
+    padding: 55px 30px 55px 30px;
+    margin: 15px;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--purple-color);
+}
+
+.services::before {
+    content: "services";
+    text-align: center;
+    font-weight: bold;
+    font-size: 260px;
+    color: var(--purple-background-text);
+    display: block;
+    position: absolute;
+    height: 400px;
+    top: 0;
+    left:50%; transform: translateX(-50%);
+    z-index: -1;
+    /*border: 3px solid green;*/
+}
+
+/*------- 4.6 Form --------------------------------------------------------------------------------------------*/
+
+.contact {
+    display: flex;
+    justify-content: center;
+    background: var(--background-header-contact);
+    padding: 120px 115px 50px 115px;
+    color: white;
+    position: relative;
+    /*border: 3px solid yellow;*/
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--width-div-narrow);
+    min-width: var(--min-width-narrow);
+    max-width: var(--max-width-div-narrow);
+    /*border: 3px solid red;*/
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 360px;
+    width: 100%;
+    padding: 15px 8px 0 8px;
+    /*border: 3px solid black;*/
+}
+
+.input-fields > * {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    /*border: 3px solid yellow;*/
+}
+
+.input-fields ::placeholder {
+    padding-left: 15px;
+}
+
+#user-name-field,
+#user-email-field {
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+}
+
+#user-message-field {
+    border-radius: 6px;
+    border: none;
+}
+
+/*------- 4.7 Footer ------------------------------------------------------------------------------------------------*/
+
+footer {
+    display: flex;
+    background: black;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: lighter;
+    color: white;
+}
+
+/*------- 4.8 Media query ------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 992px) {
+    .hello {
+        padding: 80px 0;
+    }
+    .hello::before {
+        font-size: 280px;
+    }
+    .work {
+        padding: 250px 115px 100px 115px;
+    }
+    .work::before {
+        font-size: 380px;
+    }
+    .services {
+        padding: 170px 10px 70px 10px;
+    }
+    .services::before {
+        font-size: 220px;
+    }
+    .contact h2 {
+        font-size: 30px;
+    }
+}
+
+
+/*-----------------------------------------------------*/
+
+@media screen and (max-width: 575px) {
+    .nav-links {
+        justify-content: space-between;
+        font-size: 13px;
+    }
+    .call2action {
+        width: 320px;
+        margin: 0;
+    }
+    .call2action h1 {
+        font-size: 20px;
+    }
+    .hello {
+        padding: 60px 0;
+    }
+    .hello::before {
+        font-size: 150px;
+    }
+    .intro {
+        width: 320px;
+        margin: 0;
+        padding: 0;
+    }
+    .intro h3 {
+        font-size: 14px;
+    }
+    .work {
+        padding: 90px 115px 70px 115px;
+    }
+    .work::before {
+        font-size: 140px;
+    }
+    .services {
+        padding: 55px 10px 50px 10px;
+    }
+    .services::before {
+        font-size: 80px;
+    }
+    .container-services {
+        width: 320px;
+    }
+    .container-services > * {
+        width: 3200px;
+        padding: 55px 15px;
+    }
+    .contact h2 {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
